@@ -1,6 +1,6 @@
 C:\Windows\Microsoft.NET\Framework64\v4.0.30319\MSBuild.exe FAKE.Persimmon.sln /property:Configuration=Release /property:VisualStudioVersion=12.0 /target:rebuild
 
-.\.nuget\nuget.exe pack .\Fake.Persimmon\FAKE.Persimmon.fsproj -Symbols -Properties VisualStudioVersion=12.0
+.\.nuget\nuget.exe pack .\Fake.Persimmon\Fake.Persimmon.fsproj -Symbols -Properties VisualStudioVersion=12.0
 
 if(Test-Path "nuget-packages")
 {

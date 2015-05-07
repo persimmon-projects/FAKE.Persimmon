@@ -9,11 +9,11 @@
     <title>$title$</title>
     <authors>bleis-tift, Gab-km, pocketberserker</authors>
     <owners>bleis-tift, Gab-km, pocketberserker</owners>
-    <licenseUrl>https://github.com/persimmon-projects/Fake.Persimmon/tree/$version$/LICENSE</licenseUrl>
-    <iconUrl>https://raw.githubusercontent.com/persimmon-projects/Fake.Persimmon/$version$/docs/files/images/logo.png</iconUrl>
-    <projectUrl>https://github.com/persimmon-projects/Fake.Persimmon</projectUrl>
+    <licenseUrl>https://github.com/persimmon-projects/FAKE.Persimmon/tree/$version$/LICENSE</licenseUrl>
+    <iconUrl>https://raw.githubusercontent.com/persimmon-projects/FAKE.Persimmon/$version$/docs/files/images/logo.png</iconUrl>
+    <projectUrl>https://github.com/persimmon-projects/FAKE.Persimmon</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>Fake.Persimmon is Fake extension for Persimmon.</description>
+    <description>FAKE.Persimmon is FAKE extension for Persimmon.</description>
     <tags>f# build fake</tags>
   </metadata>
 </package>
