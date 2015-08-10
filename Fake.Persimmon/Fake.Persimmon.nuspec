@@ -4,7 +4,7 @@
     <id>$id$</id>
     <version>$version$</version>
     <dependencies>
-      <dependency id="FAKE.Lib" version="3.31.2" />
+      <dependency id="FAKE.Lib" version="4.1.0" />
     </dependencies>
     <title>$title$</title>
     <authors>bleis-tift, Gab-km, pocketberserker</authors>
