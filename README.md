@@ -1,7 +1,7 @@
-FAKE.Persimmon
-==============
+# FAKE.Persimmon
 
 [![License][license-image]][license-url]
+[![Build status](https://ci.appveyor.com/api/projects/status/0q41t6cl2aqbo718/branch/master?svg=true)](https://ci.appveyor.com/project/pocketberserker/fake-persimmon/branch/master)
 
 FAKE.Persimmon is FAKE extension for [Persimmon](https://github.com/persimmon-projects/Persimmon).
 
