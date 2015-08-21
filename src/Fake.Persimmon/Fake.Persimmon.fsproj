@@ -71,12 +71,12 @@
   <Target Name="AfterBuild">
   </Target>
   -->
-  <Import Project="..\.paket\paket.targets" />
+  <Import Project="..\..\.paket\paket.targets" />
   <Choose>
     <When Condition="$(TargetFrameworkIdentifier) == '.NETFramework' And ($(TargetFrameworkVersion) == 'v4.5.1' Or $(TargetFrameworkVersion) == 'v4.5.2' Or $(TargetFrameworkVersion) == 'v4.5.3' Or $(TargetFrameworkVersion) == 'v4.6')">
       <ItemGroup>
         <Reference Include="FakeLib">
-          <HintPath>..\packages\FAKE.Lib\lib\net451\FakeLib.dll</HintPath>
+          <HintPath>..\..\packages\FAKE.Lib\lib\net451\FakeLib.dll</HintPath>
           <Private>True</Private>
           <Paket>True</Paket>
         </Reference>

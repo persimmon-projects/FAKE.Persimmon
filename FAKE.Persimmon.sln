@@ -8,7 +8,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".paket", ".paket", "{6F1A0E
 		paket.dependencies = paket.dependencies
 	EndProjectSection
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Fake.Persimmon", "Fake.Persimmon\Fake.Persimmon.fsproj", "{DC487CE6-F9D4-4189-9FDF-F840AFD2E95D}"
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Fake.Persimmon", "src\Fake.Persimmon\Fake.Persimmon.fsproj", "{DC487CE6-F9D4-4189-9FDF-F840AFD2E95D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

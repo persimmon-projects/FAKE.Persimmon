@@ -67,7 +67,8 @@ Target "AssemblyInfo" (fun _ ->
           Attribute.Guid "547AB613-8059-4A80-BF6D-B3A19B220754"
           Attribute.Description summary
           Attribute.Version release.AssemblyVersion
-          Attribute.FileVersion release.AssemblyVersion ]
+          Attribute.FileVersion release.AssemblyVersion
+          Attribute.InformationalVersion release.NugetVersion ]
 
     let getProjectDetails projectPath =
         let projectName = System.IO.Path.GetFileNameWithoutExtension(projectPath)
