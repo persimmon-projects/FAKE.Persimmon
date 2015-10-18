@@ -8,7 +8,7 @@ open System.Runtime.InteropServices
 [<assembly: AssemblyDescriptionAttribute("FAKE extension for Persimmon")>]
 [<assembly: AssemblyVersionAttribute("1.0.0")>]
 [<assembly: AssemblyFileVersionAttribute("1.0.0")>]
-[<assembly: AssemblyInformationalVersionAttribute("1.0.0-beta3")>]
+[<assembly: AssemblyInformationalVersionAttribute("1.0.0")>]
 do ()
 
 module internal AssemblyVersionInformation =
