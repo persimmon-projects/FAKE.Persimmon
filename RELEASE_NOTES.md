@@ -1,3 +1,6 @@
+### 1.0.1 - October 24 2015
+* fix FAKE.Lib version
+
 ### 1.0.0 - October 18 2015
 * initial release
 
