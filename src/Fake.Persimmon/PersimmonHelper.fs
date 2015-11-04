@@ -39,13 +39,13 @@ let buildPersimmonArgs parameters assemblies =
     match parameters.Output with
     | OutputDestination.Console -> false, ""
     | PlaneTextFile path -> (true, sprintf "--output:%s" <| path.TrimEnd Path.DirectorySeparatorChar)
-    | XmlFile path -> (true, sprintf "--output:%s --format:xml" <| path.TrimEnd Path.DirectorySeparatorChar)
+    | XmlFile path -> (true, sprintf "\"--output:%s\" --format:xml" <| path.TrimEnd Path.DirectorySeparatorChar)
   let error, errorText =
     match parameters.Error with
     | Console -> false, ""
     | File path -> (true, sprintf "--error:%s" <| path.TrimEnd Path.DirectorySeparatorChar)
   StringBuilder()
-  |> appendIfTrue output outputText
+  |> appendIfTrueWithoutQuotes output outputText
   |> appendIfTrue error errorText
   |> appendIfTrue parameters.NoProgress "--no-progress"
   |> appendIfTrue parameters.Parallel "--parallel"
