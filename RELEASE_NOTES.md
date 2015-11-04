@@ -1,3 +1,6 @@
+### 1.0.2 - November 4 2015
+* #2 fix quotes
+
 ### 1.0.1 - October 24 2015
 * fix FAKE.Lib version
 
