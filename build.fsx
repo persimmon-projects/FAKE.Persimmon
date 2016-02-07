@@ -1,4 +1,4 @@
-#r @"packages/FAKE/tools/FakeLib.dll"
+#r @"packages/build/FAKE/tools/FakeLib.dll"
 open Fake
 open Fake.Git
 open Fake.AssemblyInfoFile
@@ -7,7 +7,7 @@ open System
 open System.IO
 #if MONO
 #else
-#load "packages/SourceLink.Fake/tools/Fake.fsx"
+#load "packages/build/SourceLink.Fake/tools/Fake.fsx"
 open SourceLink
 #endif
 
@@ -133,25 +133,12 @@ Target "RunTests" (fun _ ->
 // the ability to step through the source code of external libraries https://github.com/ctaggart/SourceLink
 
 Target "SourceLink" (fun _ ->
-    let baseUrl = sprintf "%s/%s/{0}/%%var2%%" gitRaw (project.ToLower())
-    use repo = new GitRepo(__SOURCE_DIRECTORY__)
-
-    let addAssemblyInfo (projFileName:String) =
-        match projFileName with
-        | Fsproj -> (projFileName, "**/AssemblyInfo.fs")
-        | Csproj -> (projFileName, "**/AssemblyInfo.cs")
-        | Vbproj -> (projFileName, "**/AssemblyInfo.vb")
-
+    let baseUrl = sprintf "%s/%s/{0}/%%var2%%" gitRaw project
     !! "src/**/*.??proj"
-    |> Seq.map addAssemblyInfo
-    |> Seq.iter (fun (projFile, assemblyInfo) ->
+    -- "src/**/*.shproj"
+    |> Seq.iter (fun projFile ->
         let proj = VsProj.LoadRelease projFile
-        logfn "source linking %s" proj.OutputFilePdb
-        let files = proj.Compiles -- assemblyInfo
-        repo.VerifyChecksums files
-        proj.VerifyPdbChecksums files
-        proj.CreateSrcSrv baseUrl repo.Revision (repo.Paths files)
-        Pdbstr.exec proj.OutputFilePdb proj.OutputFilePdbSrcSrv
+        SourceLink.Index proj.CompilesNotLinked proj.OutputFilePdb __SOURCE_DIRECTORY__ baseUrl
     )
 )
 
@@ -175,7 +162,7 @@ Target "PublishNuget" (fun _ ->
 )
 
 
-#load "paket-files/fsharp/FAKE/modules/Octokit/Octokit.fsx"
+#load "paket-files/build/fsharp/FAKE/modules/Octokit/Octokit.fsx"
 open Octokit
 
 Target "Release" (fun _ ->
