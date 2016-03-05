@@ -13,3 +13,5 @@ tags
     fsharp build fake
 description
     FAKE.Persimmon is FAKE extension for Persimmon.
+dependencies
+    Persimmon.Console >= CURRENTVERSION

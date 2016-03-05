@@ -7,6 +7,7 @@ group Build
   source https://api.nuget.org/v3/index.json
 
   nuget FAKE
+  nuget Persimmon.Console >= 1.0.2
   nuget Nuget.CommandLine
   nuget SourceLink.Fake
 
