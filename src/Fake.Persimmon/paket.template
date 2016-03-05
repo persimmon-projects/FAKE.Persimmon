@@ -14,4 +14,4 @@ tags
 description
     FAKE.Persimmon is FAKE extension for Persimmon.
 dependencies
-    Persimmon.Console >= CURRENTVERSION
+    Persimmon.Console >= LOCKEDVERSION
