@@ -1,3 +1,6 @@
+### 1.0.3 - March 5 2016
+* add dependency (Persimmon.Console)
+
 ### 1.0.2 - November 4 2015
 * #2 fix quotes
 
