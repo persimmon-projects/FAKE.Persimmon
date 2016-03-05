@@ -1,3 +1,6 @@
+### 1.0.4 - March 5 2016
+* fix Persimmon.Console version
+
 ### 1.0.3 - March 5 2016
 * add dependency (Persimmon.Console)
 
