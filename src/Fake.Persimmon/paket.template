@@ -7,10 +7,12 @@ projectUrl
     https://github.com/persimmon-projects/FAKE.Persimmon
 licenseUrl
     https://github.com/persimmon-projects/FAKE.Persimmon/blob/master/LICENSE
+iconUrl
+    https://raw.githubusercontent.com/persimmon-projects/Persimmon.Materials/master/StandardIcons/persimmon_128.png
 requireLicenseAcceptance
     false
 tags
-    fsharp build fake
+    F#, fsharp, build, fake
 description
     FAKE.Persimmon is FAKE extension for Persimmon.
 dependencies
